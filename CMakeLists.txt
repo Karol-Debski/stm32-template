@@ -13,7 +13,6 @@ project(stm32-template)
 
 add_subdirectory(app)
 add_subdirectory(target)
-add_subdirectory(toolchain)
 
 message(FATAL_ERROR "Provide MCU name for compiler (e.g. STM32F407xx), then comment that message.")
 set(MCU_TARGET )
@@ -38,8 +37,8 @@ set(ASM_SRCS
 )
 
 set(GLOBAL_DEFINES 
-    -DUSE_HAL_DRIVER 
-    -D${MCU_TARGET}
+    "-DUSE_HAL_DRIVER 
+    -D${MCU_TARGET}"
 )
 
 set(LINKED_LIBS 
