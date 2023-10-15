@@ -15,7 +15,7 @@ list(APPEND TARGET_INCLUDE_DIRS
     ${TARGET_PROJECT_PATH}/Drivers/CMSIS/Include
 
 )
-message("---------------------${STARTUP_FILE_SRC}")
+
 list(APPEND TARGET_SRC
     ${STARTUP_FILE_SRC} 
     ${TARGET_PROJECT_PATH}/Core/Src/main.c 
