@@ -10,8 +10,6 @@ set(CORE_FLAGS "${CORE_FLAGS} -mfloat-abi=hard -mfpu=fpv4-sp-d16")
 # Ignore edge cases of computation, decrease time of computations
 set(CORE_FLAGS "${CORE_FLAGS} -ffast-math")
 
-#set(CORE_FLAGS "${CORE_FLAGS} ${GLOBAL_DEFINES}")
-
 # Compiler flags specific for C++ files
 # -std - C++ standard: c++98, gnu++98, c++11, gnu++11, c++14, gnu++14
 # -fno-rtti - disable virtual class information used by dynamic_cast and typeid
@@ -26,7 +24,7 @@ set(CXX_FLAGS "-std=gnu++11 -O0 -g -fno-rtti -fno-exceptions -fverbose-asm -MMD"
 # fverbose-asm - additional comments for generated assembler code
 # -MMD - create dependency files
 #set(C_FLAGS "-std=gnu99 -O0 -ffunction-sections -fdata-sections -fverbose-asm -MMD")
-set(C_FLAGS "-std=gnu11 -Wall -O0 -ffunction-sections -fdata-sections -fverbose-asm -MMD -DUSE_HAL_DRIVER -DSTM32F407xx")
+set(C_FLAGS "-std=gnu11 -Wall -O0 -ffunction-sections -fdata-sections -fverbose-asm -MMD ${GLOBAL_DEFINES}")
 
 set(ASM_FLAGS "-x assembler-with-cpp")
 

@@ -16,7 +16,7 @@ Generate project by STM32CubeMX with Makefiles. Paste all files to target/projec
 
 Provide MCU target for compiler, e.g. STM32F407xx.
 
-Provide src, inc dirs in the target/CMakeLists.txt . Paste your app_main function in main of the project.
+Provide src, inc dirs, syscalls.c, sysmem.c in the target/CMakeLists.txt . Paste your app_main function in main of the project.
 
 
 1. Build executable
